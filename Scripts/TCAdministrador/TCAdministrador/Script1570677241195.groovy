@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
@@ -23,7 +24,59 @@ WebUI.setEncryptedText(findTestObject('Page_Coaching/input_Contrasea_txt_pass'),
 
 WebUI.click(findTestObject('Page_Coaching/input__btn_ingresar'))
 
-WebUI.click(findTestObject('Object Repository/Page_Untitled Page/a_Areas'))
+WebUI.click(findTestObject('Page_Untitled Page/a_Areas'))
 
-WebUI.closeBrowser()
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl06txt_nombre'), 
+    'Prueba')
+
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl06txt_descripcion'), 
+    'Prueba')
+
+WebUI.sendKeys(findTestObject('Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl06txt_descripcion'), 
+    Keys.chord(Keys.ENTER))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Page_Asesoria Legal/a_Actualizar'))
+
+WebUI.click(findTestObject('Object Repository/Page_Asesoria Legal/a_Eliminar'))
+
+WebUI.click(findTestObject('Object Repository/Page_Asesoria Legal/a_Cargos'))
+
+WebUI.setText(findTestObject('Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl05txt_nombre_cargo'), 
+    'Prueba')
+
+WebUI.setText(findTestObject('Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl05txt_descripcion_cargo'), 
+    'Prueba')
+
+WebUI.sendKeys(findTestObject('Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl05txt_descripcion_cargo'), 
+    Keys.chord(Keys.ENTER))
+
+WebUI.click(findTestObject('Page_Asesoria Legal/a_Actualizar_cargo'))
+
+WebUI.click(findTestObject('Page_Asesoria Legal/a_Eliminar_cargo'))
+
+WebUI.click(findTestObject('Object Repository/Page_Asesoria Legal/a_Usuarios'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_IngrPass_ctl00ContentPlaceHolder1GridView1ctl05txt_nombre'), 
+    'Prueba')
+
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_Ing                     Nombre_ctl00ContentPlaceHolder1GridView1ctl05txt_carnet'), 
+    '123')
+
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_IngrCarnet_ctl00ContentPlaceHolder1GridView1ctl05txt_login'), 
+    'prueba')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Asesoria Legal/input_Ingr Login_ctl00ContentPlaceHolder1GridView1ctl05txt_pass'), 
+    'tK36OE9ZDPo=')
+
+WebUI.sendKeys(findTestObject('Object Repository/Page_Asesoria Legal/input_Ingr Login_ctl00ContentPlaceHolder1GridView1ctl05txt_pass'), 
+    Keys.chord(Keys.ENTER))
+
+WebUI.setText(findTestObject('Object Repository/Page_Asesoria Legal/input_Eliminar_ctl00ContentPlaceHolder1GridView1ctl05TextBox1'), 
+    'Pruebita')
+
+WebUI.click(findTestObject('Object Repository/Page_Asesoria Legal/a_Actualizar_2'))
+
+WebUI.click(findTestObject('Object Repository/Page_Asesoria Legal/a_Eliminar_2'))
 

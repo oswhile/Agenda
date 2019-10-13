@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>4993c196-f4e0-4024-8c4d-c9eeee15959d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TCAdministrador/TCAdministrador</testCaseId>
    </testCaseLink>
    <testCaseLink>
